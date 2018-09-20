@@ -9,7 +9,15 @@ end
 
 feature 'Hit points' do
   scenario "View player 2's hit points" do
-    visit('/play')
+    sign_in_and_play
     expect(page).to have_content('Player 2 Hit Count: 100')
+  end
+end
+
+feature 'Attack' do
+  scenario "Attacking player two" do
+    sign_in_and_play
+    click_button 'AttackP2'
+    expect(page).to have_content ('Player 2 Hit Count: 50')
   end
 end
