@@ -18,6 +18,6 @@ feature 'Attack' do
   scenario "Attacking player two" do
     sign_in_and_play
     click_button 'AttackP2'
-    expect(page).to have_content ('Player 2 Hit Count: 50')
+    expect(page).to have_content ('Player 2 Hit Count: 90')
   end
 end
