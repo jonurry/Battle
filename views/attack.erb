@@ -1,8 +1,8 @@
-<%=@player_1%> vs. <%=@player_2%>
+<%=@nice_game.player_1.name%> vs. <%=@nice_game.player_2.name%>
 <div>
-  <h3>Player 1 Hit Count: <%= @health_1%></h3>
+  <h3>Player 1 Hit Count: <%= @nice_game.player_1.health%></h3>
 </div>
 
 <div>
-  <h3>Player 2 Hit Count: <%=@health_2%></h3>
+  <h3>Player 2 Hit Count: <%=@nice_game.player_2.health%></h3>
 </div>

@@ -17,20 +17,14 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    nice_game = Game.instance
-    @player_1 = nice_game.player_1.name
-    @player_2 = nice_game.player_2.name
+    @nice_game = Game.instance
     erb(:play)
     #binding.pry
   end
 
   get '/attack' do
-    nice_game = Game.instance
-    @player_1 = nice_game.player_1.name
-    @player_2 = nice_game.player_2.name
-    nice_game.attack(nice_game.player_2)
-    @health_1 = nice_game.player_1.health
-    @health_2 = nice_game.player_2.health
+    @nice_game = Game.instance
+    @nice_game.attack(@nice_game.player_2)
     erb :attack
   end
 
